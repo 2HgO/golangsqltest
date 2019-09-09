@@ -10,16 +10,8 @@ import (
 // Board defines 9x9 sudoku grid
 var Board [9][9]int
 
-func init(){
-	if true{
-		defer fmt.Println(1)
-	}
-	defer fmt.Println(3)
-	defer fmt.Println(2)
-}
-
 func main(){
-	connectionString := "user=postgres password='babayaga' dbname=gamesapp sslmode=disable" 
+	connectionString := "user=postgres password='' dbname=gamesapp sslmode=disable" 
 	connection, err := sql.Open("postgres", connectionString)
 	defer connection.Close()
 	if err != nil{
